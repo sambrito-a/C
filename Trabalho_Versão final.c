@@ -145,13 +145,13 @@ void carregar_eventos() {
     }
 
     while (fscanf(arquivo, "%d,%49[^,],%10[^,],%49[^,],%29[^\n]\n",
-                  &eventos[total_eventos].id, // Corrigido: adicionando '&'
+                  &eventos[total_eventos].id, 
                   eventos[total_eventos].nome,
                   eventos[total_eventos].data,
                   eventos[total_eventos].local,
                   eventos[total_eventos].tipo) != EOF) {
         if (eventos[total_eventos].id > ultimo_id) {
-            ultimo_id = eventos[total_eventos].id; // Atualiza o último ID
+            ultimo_id = eventos[total_eventos].id; /*Atualiza o último ID*/ 
         }
         total_eventos++;
     }
